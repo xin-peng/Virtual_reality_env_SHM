@@ -1,7 +1,5 @@
-# Virtual_reality_env_SHM
 # A Virtual Reality Environment for Developing and Testing Autonomous UAV-based Structural Inspection
 ## Unreal Engine, AirSim, ROS, SLAM
-
 
 This documentation is an instruction to help users to create a virtual reality environment for developing and testing autonomous UAV-based structural inspection algorithm. The full instruction including examples and demoes will be post after EWSHM2022. https://www.ewshm2022.com/
 ## Related paper
@@ -51,6 +49,13 @@ Now AirSim will publish the drone location and sensor data lively. You can run r
 One of SLAM algorithm we choose as an example is Direct Sparse Odometry(https://vision.in.tum.de/research/vslam/dso). We develop a ROS version for DSO, which forks from (https://github.com/JakobEngel/dso). One change we made is that the DSO will subscribe the image data with a topic name and publish the estimated pose and feature point as point cloud.
 - Install DSO https://github.com/JakobEngel/dso
 - Install our version of DSO ROS https://github.com/koufongso/dso_ros
+- Start to run DSO ROS 
+```sh
+	rosrun dso_ros dso_live image:=[ros_image_topic] \
+		calib=XXXXX/camera.txt \
+		gamma=XXXXX/pcalib.txt \
+		vignette=XXXXX/vignette.png \
+```
 ### HDL Graph SLAM
  - Install hdl graph SLAM through https://github.com/koide3/hdl_graph_slam
  - Follow the instruction of use hdl_graph_slam in your system
