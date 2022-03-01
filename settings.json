@@ -1,0 +1,78 @@
+{
+  "SettingsVersion": 1.2,
+  "SimMode": "Multirotor",
+  "Vehicles": {
+  	"Drone1": {
+      "VehicleType": "SimpleFlight",
+      "DefaultVehicleState": "Inactive",
+      "EnableCollisionPassthrogh": false,
+      "EnableCollisions": true,
+      "X": 0,
+      "Y": 0,
+      "Z": 0,
+      "Pitch": 0, "Roll": 0, "Yaw": 0,
+       "Sensors": {
+        "Imu": {
+          "SensorType": 2,
+          "Enabled" : true,
+          "AngularRandomWalk": 0.3,
+          "GyroBiasStabilityTau": 500,
+          "GyroBiasStability": 4.6,
+          "VelocityRandomWalk": 0.24,
+          "AccelBiasStabilityTau": 800,
+          "AccelBiasStability": 36
+        },
+      		"LidarSensor1": {
+                "SensorType": 6,
+                "Enabled" : true,
+                "NumberOfChannels": 64,
+                "Range": 100.0,
+                "RotationsPerSecond": 10,
+                "PointsPerSecond": 100000,
+                "X": 0, "Y": 0, "Z": -1,
+                "Roll": 0, "Pitch": 0, "Yaw" : 0,
+                "VerticalFOVUpper": 0,
+                "VerticalFOVLower": -90,
+                "HorizontalFOVStart": -90,
+                "HorizontalFOVEnd": 90,
+                "DrawDebugPoints": false,
+                "DataFrame": "SensorLocalFrame"
+            }
+        },
+      "Cameras": {
+        "camera_1": {
+          "CaptureSettings": [
+            {
+              "ImageType": 0,
+              "Width": 640,
+              "Height": 480,
+              "FOV_Degrees": 90,
+              "TargetGamma": 1.5
+            }, 
+            {
+              "ImageType": 1,
+              "Width": 640,
+              "Height": 480,
+              "FOV_Degrees": 90,
+              "TargetGamma": 1.5
+            }
+          ],
+          "X": 0.5, "Y": -0.06, "Z": 0.10,
+          "Pitch": -20.0, "Roll": 0.0, "Yaw": 0.0
+        }
+      }
+    }
+	},
+  "Recording": {
+    "RecordOnMove": false,
+    "RecordInterval": 0.1,
+    "Cameras": [
+      {
+        "CameraName": "camera_1",
+        "ImageType": 0,
+        "PixelsAsFloat": false,
+        "Compress": true
+      }
+    ]
+  }
+}
