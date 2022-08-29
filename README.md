@@ -2,8 +2,8 @@
 ## Unreal Engine, AirSim, ROS, SLAM
 
 This documentation is an instruction to help users to create a virtual reality environment for developing and testing autonomous UAV-based structural inspection algorithm. The full instruction including examples and demoes will be post after EWSHM2022. https://www.ewshm2022.com/
-## Related paper
-A Virtual Reality Environment for Developing and Testing Autonomous UAV-based Structural Inspection, X. Peng, G. Su, Z. Chen, R. Sengupta, EWSHM 2022.
+## Reference
+Peng, X., Su, G., Chen, Z., Sengupta, R. (2023). A Virtual Reality Environment for Developing and Testing Autonomous UAV-Based Structural Inspection. In: Rizzo, P., Milazzo, A. (eds) European Workshop on Structural Health Monitoring. EWSHM 2022. Lecture Notes in Civil Engineering, vol 254. Springer, Cham. https://doi.org/10.1007/978-3-031-07258-1_54
 ## Dependencies
 - ROS
 - Unreal Engine (Version 4.25)
