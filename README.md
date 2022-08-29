@@ -61,3 +61,9 @@ One of SLAM algorithm we choose as an example is Direct Sparse Odometry(https://
  - Follow the instruction of use hdl_graph_slam in your system
 ### GPS way-point control 
 To control the virtual drone flies in the Unreal Engine environment, there is a python script for setting up the predefined GPS way-point control system (drone_path_waypoint.py).
+### Example
+The following demo shows one example of controlling UAV in the lab and the results of DSO and HDL Graph SLAM.
+
+https://user-images.githubusercontent.com/38301806/187311952-c8a17743-d18c-4023-8618-49a6f1faa755.MP4
+
+
