@@ -11,8 +11,8 @@ Peng, X., Su, G., Chen, Z., Sengupta, R. (2023). A Virtual Reality Environment f
 
 ## Installation & Tutorial
 ### Unreal Engine
-https://docs.unrealengine.com/4.27/en-US/SharingAndReleasing/Linux/BeginnerLinuxDeveloper/SettingUpAnUnrealWorkflow/
-Please make sure you are installing with branch 4.25.
+
+Please make sure you are installing with branch 4.25. [UE installation](https://docs.unrealengine.com/4.27/en-US/SharingAndReleasing/Linux/BeginnerLinuxDeveloper/SettingUpAnUnrealWorkflow/)
 ### AirSim
 - Build AirSim
 ```sh
@@ -23,7 +23,7 @@ cd AirSim
 ```
 - Enable AirSim as a plugin for Unreal Engine
 1. Open a Unreal Engine project and create a C++ class.
-2. Close the project and change the project file xx.uproject with an editor, including adding "AdditionalDependencies": ["AirSim"] to "Modules" and adding {"Name":"AirSim","Enabled":true} to "Plugins".
+2. Close the project and change the project file xx.uproject with an editor, including adding "AdditionalDependencies": ["AirSim"] to "Modules" and adding {"Name":"AirSim","Enabled":true} to "Plugins". Please refer to [an example uproject](https://github.com/xin-peng/Virtual_reality_env_SHM/blob/main/example.uproject) for details.
 3. Reopen the project, changing game mode to AirSim, and click play.
 - Change drone sensor types and parameter by changing Documents/AirSim/settings.json. There is one example of settings.json, which represents a drone with lidar, IMU, camera, and GPS.
 - Set up the environment variables for ROS
@@ -42,9 +42,7 @@ source devel/setup.bash
 rosrun
 roslaunch airsim_ros_pkgs airsim_node.launch
 ```
-Now AirSim will publish the drone location and sensor data lively. To enable the AirSim function, the existing Unreal Engine project file needs to be modified. Please refer to [an example uproject](https://github.com/xin-peng/Virtual_reality_env_SHM/blob/main/example.uproject) for details. "Plugins" need to include "AirSim".
-
-Now you can run rostopic list to check the name of sensor topic. The next step is running SLAM algorithm based on it.
+Now AirSim will publish the drone location and sensor data lively. You can run rostopic list to check the name of sensor topic. The next step is running SLAM algorithm based on it.
 ### DSO
 One of SLAM algorithm we choose as an example is Direct Sparse Odometry(https://vision.in.tum.de/research/vslam/dso). We develop a ROS version for DSO, which forks from (https://github.com/JakobEngel/dso). One change we made is that the DSO will subscribe the image data with a topic name and publish the estimated pose and feature point as point cloud.
 - Install DSO https://github.com/JakobEngel/dso
