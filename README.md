@@ -1,7 +1,5 @@
 # A Virtual Reality Environment for Developing and Testing Autonomous UAV-based Structural Inspection
-## Unreal Engine, AirSim, ROS, SLAM
-
-This documentation is an instruction to help users to create a virtual reality environment for developing and testing autonomous UAV-based structural inspection algorithm. The full instruction including examples and demoes will be post after EWSHM2022. https://www.ewshm2022.com/
+This documentation is an instruction to help users to create a virtual reality environment for developing and testing autonomous UAV-based structural inspection algorithm.
 ## Reference
 Peng, X., Su, G., Chen, Z., Sengupta, R. (2023). A Virtual Reality Environment for Developing and Testing Autonomous UAV-Based Structural Inspection. In: Rizzo, P., Milazzo, A. (eds) European Workshop on Structural Health Monitoring. EWSHM 2022. Lecture Notes in Civil Engineering, vol 254. Springer, Cham. https://doi.org/10.1007/978-3-031-07258-1_54
 ## Dependencies
@@ -11,7 +9,7 @@ Peng, X., Su, G., Chen, Z., Sengupta, R. (2023). A Virtual Reality Environment f
 - Direct Sparse Odometry
 - HDL Graph SLAM
 
-## Installation
+## Installation & Tutorial
 ### Unreal Engine
 https://docs.unrealengine.com/4.27/en-US/SharingAndReleasing/Linux/BeginnerLinuxDeveloper/SettingUpAnUnrealWorkflow/
 Please make sure you are installing with branch 4.25.
@@ -44,7 +42,9 @@ source devel/setup.bash
 rosrun
 roslaunch airsim_ros_pkgs airsim_node.launch
 ```
-Now AirSim will publish the drone location and sensor data lively. You can run rostopic list to check the name of sensor topic. The next step is running SLAM algorithm based on it.
+Now AirSim will publish the drone location and sensor data lively. To enable the AirSim function, the existing Unreal Engine project file needs to be modified. Please refer to [an example uproject](https://github.com/xin-peng/Virtual_reality_env_SHM/blob/main/example.uproject) for details. "Plugins" need to include "AirSim".
+
+Now you can run rostopic list to check the name of sensor topic. The next step is running SLAM algorithm based on it.
 ### DSO
 One of SLAM algorithm we choose as an example is Direct Sparse Odometry(https://vision.in.tum.de/research/vslam/dso). We develop a ROS version for DSO, which forks from (https://github.com/JakobEngel/dso). One change we made is that the DSO will subscribe the image data with a topic name and publish the estimated pose and feature point as point cloud.
 - Install DSO https://github.com/JakobEngel/dso
