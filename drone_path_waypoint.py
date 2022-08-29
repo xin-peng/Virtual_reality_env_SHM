@@ -28,7 +28,6 @@ def main():
 	# turn raw angle for 30 degrees
 	client.rotateToYawAsync(-30,5,1).join()
 	client.landAsync().join()
-	print(5)
 	client.armDisarm(False)
 
 	# that's enough fun for now. let's quit cleanly
