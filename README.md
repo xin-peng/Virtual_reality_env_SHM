@@ -1,5 +1,5 @@
 # A Virtual Reality Environment for Developing and Testing Autonomous UAV-based Structural Inspection
-This documentation is an instruction to help users to create a virtual reality environment for developing and testing autonomous UAV-based structural inspection algorithm.
+This documentation is an instruction to help users to create a virtual reality environment for developing and testing autonomous UAV-based structural inspection algorithm. In this platform, user can control single or multiple UAV with different types of sensors.
 ## Reference
 Peng, X., Su, G., Chen, Z., Sengupta, R. (2023). A Virtual Reality Environment for Developing and Testing Autonomous UAV-Based Structural Inspection. In: Rizzo, P., Milazzo, A. (eds) European Workshop on Structural Health Monitoring. EWSHM 2022. Lecture Notes in Civil Engineering, vol 254. Springer, Cham. https://doi.org/10.1007/978-3-031-07258-1_54
 ## Dependencies
@@ -60,8 +60,14 @@ One of SLAM algorithm we choose as an example is Direct Sparse Odometry(https://
 ### GPS way-point control 
 To control the virtual drone flies in the Unreal Engine environment, there is a python script for setting up the predefined GPS way-point control system (drone_path_waypoint.py).
 ### Example
-The following demo shows one example of controlling UAV in the lab and the results of DSO and HDL Graph SLAM.
+The following demo shows one example of controlling one UAV in the lab and the results of DSO and HDL Graph SLAM.
 
 https://user-images.githubusercontent.com/38301806/187311952-c8a17743-d18c-4023-8618-49a6f1faa755.MP4
+
+The following demo shows controlling multiple UAVs.
+
+
+
+https://user-images.githubusercontent.com/38301806/187320784-0b6018f3-ca57-49c4-b236-e6cd3233f481.mp4
 
 
